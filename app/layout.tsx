@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./v02.css";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "SWITCH — платформа взаимного обучения",
