@@ -1,3 +1,3 @@
-import { CatalogPage } from "../../components/PrototypePages";
+import { CatalogView } from "../../components/CatalogView";
 export const dynamic = "force-static";
-export default CatalogPage;
+export default CatalogView;

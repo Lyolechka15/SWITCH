@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./v02.css";
+import "./v03.css";
 
 export const dynamic = "force-static";
 
