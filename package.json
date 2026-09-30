@@ -9,14 +9,20 @@
     "install:ci": "node scripts/install-ci.mjs",
     "dev": "node scripts/run-framework.mjs dev",
     "build": "node scripts/run-framework.mjs build",
-    "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0"
+    "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
+    "api:dev": "tsx watch server/src/index.ts",
+    "api:build": "tsc -p server/tsconfig.json",
+    "api:start": "node dist/server-api/index.js"
   },
   "dependencies": {
+    "@fastify/cors": "^11.3.0",
+    "fastify": "^5.12.5",
     "lucide-react": "^1.31.0",
     "next": "16.3.4",
     "react": "19.2.6",
     "react-dom": "19.2.6",
-    "react-server-dom-webpack": "19.2.6"
+    "react-server-dom-webpack": "19.2.6",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
@@ -26,6 +32,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "@vitejs/plugin-rsc": "0.5.26",
+    "tsx": "^4.23.15",
     "typescript": "5.9.3",
     "vinext": "1.0.0-beta.5",
     "vite": "8.0.13",
