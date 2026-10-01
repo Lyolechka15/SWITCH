@@ -7,7 +7,7 @@ import { SiteLink } from "./SiteLink";
 
 const teachers=[['Алексей Петров','Python','Advanced','4.9','Сегодня после 18:00','А'],['Мария Соколова','Иллюстрация','Advanced','4.8','Завтра','М'],['Елена Воронова','Английский язык','Upper-intermediate','4.9','В пятницу','Е'],['Иван Морозов','Фотография','Intermediate','4.7','На этой неделе','И']];
 const skills=[['Python для начинающих','Программирование','Начинающий','Онлайн','4.9'],['UI/UX: основы интерфейса','Дизайн и творчество','Начинающий','Онлайн','4.8'],['Разговорный английский','Языки','Средний','Гибрид','4.9'],['Фотография в городе','Фото и видео','Начинающий','Очно','4.7'],['Личный бюджет','Бизнес и финансы','Начинающий','Онлайн','4.8'],['Основы C','Программирование','Средний','Онлайн','4.7']];
-const operations=[['+1.0','Проведено занятие Python','Сегодня','earned'],['−1.5','Занятие по английскому языку','18 сентября','spent'],['+15','Награда за 1 место в рейтинге месяца','1 сентября','earned'],['+1.0','Проведено занятие C','29 августа','earned']];
+const operations=[['+1.0','Проведено занятие Python','Сегодня','earned'],['−1.5','Занятие по английскому языку','18 сентября','spent'],['+8','Награда за 1 место в рейтинге месяца','1 сентября','earned'],['+1.0','Проведено занятие C','29 августа','earned']];
 
 function Page({title,kicker,children}:{title:string;kicker:string;children:React.ReactNode}){return <AppShell><main className="product-page"><div className="page-title"><p className="eyebrow"><span/>{kicker}</p><h1>{title}</h1></div>{children}</main></AppShell>}
 function Card({children,className=""}:{children:React.ReactNode;className?:string}){return <article className={`ui-card ${className}`}>{children}</article>}
